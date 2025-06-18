@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white;
+  font-family: 'Newsreader', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  margin: 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.line.first-line {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.line.second-line {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0 }
+}
+
+
