@@ -1,87 +1,133 @@
 # 🧱 Boilerplate Bash Project — Terminal-Only Web Starter
 
-This project was developed by building a basic web boilerplate (HTML, CSS, JS) using **only Bash and the terminal**, as an advanced reproduction of the [“Learn Bash by Building a Boilerplate”](https://www.freecodecamp.org/learn/relational-database/learn-bash-by-building-a-boilerplate/build-a-boilerplate) course from freeCodeCamp — without relying on Gitpod or broken extensions like CodeRoad.
+A developer journey through setting up a complete frontend boilerplate using **only the terminal**. This project reproduces and expands on the freeCodeCamp course “Learn Bash by Building a Boilerplate” — but completely offline, locally, and containerized.
 
 ---
 
-## 🌀 Phase 1 — Build a reproducible professional environment
+## 📚 Table of Contents
 
-> Understand how a real developer sets up a containerized local environment **without depending on online tools** like Gitpod Classic or CodeRoad.
+1. [Project Overview](#project-overview)
+2. [Environment Setup](#environment-setup)
+3. [Styling the Interface](#styling-the-interface)
+4. [Version Control with Git](#version-control-with-git)
+5. [Deployment](#deployment)
+6. [How to Run the Project Locally](#how-to-run-the-project-locally)
+7. [Technologies & Tools Used](#technologies--tools-used)
+8. [Reflections & Learnings](#reflections--learnings)
+9. [License](#license)
 
-### Highlight:
-- This project was done completely **locally with Docker and VS Code**
+---
 
-### 💻 Local setup & environment configuration:
+## 📌 Project Overview
 
-- Installed Docker and ran it successfully (`hello-world`)
-- Created a personalized `Dockerfile` with Ubuntu + custom tools:
-  - `curl`, `nano`, `tree`, etc.
-- Entered Ubuntu container as root
-- Built a functional web boilerplate with:
+This project was created as a way to practice real-world terminal workflows and frontend setup without relying on visual editors or prebuilt scaffolds. From project structure to styling and deployment — everything was done manually, with precision.
 
+---
+
+## 🌀 Environment Setup
+
+To simulate how professional developers set up an environment from scratch:
+
+* Installed Docker and ran a container using a custom **Dockerfile** based on Ubuntu.
+* Inside the container:
+
+  * Installed `nano`, `curl`, `tree`, and other CLI tools.
+  * Navigated and built all files with Bash: `mkdir`, `touch`, `nano`, `ls`, `tree`, etc.
+  * Set up `asdf` to install Node.js v20.14.0.
+  * Installed `pnpm` and launched a dev server with `serve`.
+
+**File structure:**
+
+```
 /boilerplate-project/
 ├── index.html
 ├── css/
-│ └── styles.css
+│   └── styles.css
 └── js/
-└── main.js
+    └── main.js
+```
 
-- ✅ Used terminal-only Bash commands: `mkdir`, `touch`, `cat`, `nano`, `ls`, `tree`, `cd`
-- ✅ Installed `Node.js v20.14.0` using `asdf`
-- ✅ Created and launched local server using `pnpm` + `serve`
+---
+
+## 🎨 Styling the Interface
+
+In this phase, we implemented a responsive **typewriter animation** entirely in CSS and JavaScript:
+
+* Used `clamp()` for fluid typography
+* Created two lines of animated text
+* Designed the effect to work on **black background** with **white text**, centered on the screen
+* Ensured full responsiveness and controlled the typewriter cursor precisely
+
+---
+
+## 🔁 Version Control with Git
+
+* Initialized Git locally
+* Created a custom branch `screen` for animation styling
+* Added and committed changes manually via CLI
+* Configured SSH authentication for GitHub with a secure token and SSH key
+* Pushed `screen` branch and later merged it into `main` after code review
+
+---
+
+## 🌐 Deployment
+
+* Activated **GitHub Pages** for the repository
+* Published the final build to a live URL:
+
+🔗 [Live](https://mspgosende.github.io/rd-project-1-boilerplate-bash)
+
+---
+
+## 💻 How to Run the Project Locally
+
+```bash
+# Clone the repository
+$ git clone git@github.com:mspgosende/rd-project-1-boilerplate-bash.git
+
+# Navigate to the folder
+$ cd rd-project-1-boilerplate-bash
+
+# Install a static server (only if not installed)
+$ pnpm add -g serve
+
+# Launch the project
+$ serve .
+```
+
+> Make sure you have **pnpm**, **Node.js v20**, and optionally Docker if reproducing the setup.
 
 ---
 
 ## ⚙️ Technologies & Tools Used
 
-| Tool       | Version      | Notes                          |
-|------------|--------------|--------------------------------|
-| Docker     | Latest       | Custom image, CLI-only Ubuntu |
-| Node.js    | 20.14.0      | Installed via `asdf`          |
-| pnpm       | 10.12.1      | Installed globally             |
-| serve      | 14.2.4       | Local dev server               |
-| Bash       | GNU          | Terminal-only workflow         |
-| nano       | Ubuntu pkg   | Text editing in CLI            |
-| VS Code    | Local        | Only for final viewing         |
+| Tool    | Version    | Notes                       |
+| ------- | ---------- | --------------------------- |
+| Docker  | Latest     | CLI-only container (Ubuntu) |
+| Node.js | 20.14.0    | Installed via asdf          |
+| pnpm    | 10.12.1    | Global package manager      |
+| serve   | 14.2.4     | Lightweight dev server      |
+| Bash    | GNU        | Terminal-only workflow      |
+| nano    | Ubuntu pkg | CLI text editor             |
+| VS Code | Local      | Used only for preview phase |
 
 ---
 
-## 🚀 Phase 2 — Project context
+## 🧠 Reflections & Learnings
 
-This repo reproduces and extends the learning goals of the freeCodeCamp course:
-
-> **“Learn Bash by Building a Boilerplate”**
-
-### 🔍 Course Goals Recreated Locally:
-
-- Learn how to use Bash/CLI in web development
-- Build project structure manually:
-- `mkdir`, `touch`, `nano`
-- Avoid using any GUI or VS Code until final result
-- Understand how to automate tasks and structure projects reproducibly
-- Replace Gitpod + CodeRoad with a stable local setup
-
----
-
-## 🧠 Reflections
-
-This project was developed as a **real-world workaround** to technical barriers (broken extensions, deprecated platforms) and ended up becoming a **deep learning experience** on how to:
-
-- Set up a full frontend-ready environment with containers
-- Use Bash fluently
-- Work without depending on web-based IDEs
-- Document and control every step
-
----
-
-## 📌 Status
-
--  Project complete
--  Repository is public
-- 🛠️ Can be reused as a starter template for terminal-based projects or frontend DevOps training
+* Learned to work 100% without graphical tools
+* Mastered basic Bash file manipulation and navigation
+* Set up secure GitHub authentication via SSH
+* Deployed static pages from GitHub using GitHub Pages
+* Reinforced the value of understanding what happens *behind* the IDE
 
 ---
 
 ## 📂 License
 
-This repo is for educational purposes and personal growth documentation.
+This repository is public and built for educational purposes and personal growth. Feel free to fork or reuse.
+
+---
+
+> ✨ Made by [@mspgosende](https://github.com/mspgosende)
+
