@@ -1,25 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fcc-p1-msg</title>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="data:,">
-</head>
-<body>
-  <div class="container">
-    <div class="line first-line">
-      <span id="text1"></span><span class="cursor" id="cursor1">|</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>fcc-p1-msg</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <img id="cursor-follow" src="assets/keys/m.png" alt="" draggable="false" />
+    <div class="container no-caret" tabindex="-1" aria-label="Intro text">
+      <div class="line first-line">
+        <span id="text1"></span>
+        <span class="cursor" id="cursor1">|</span>
     </div>
     <div class="line second-line">
-      <span id="text2"></span><span class="cursor" id="cursor2">|</span>
+        <span id="text2"></span>
+        <span class="cursor" id="cursor2">|</span>
     </div>
-  </div>
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
-
-
-

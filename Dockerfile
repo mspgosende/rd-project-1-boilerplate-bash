@@ -1,8 +1,1 @@
-FROM ubuntu:latest
-
-RUN apt update && \
-    apt install -y curl nano tree
-
-WORKDIR /project
-
-CMD [ "bash" ]
+﻿FROM ubuntu:latestRUN apt update && \    apt install -y curl nano treeWORKDIR /projectCMD [ "bash" ]

@@ -1,0 +1,23 @@
+{
+  "name": "rd-project-1-boilerplate-bash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mspgosende/rd-project-1-boilerplate-bash.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mspgosende/rd-project-1-boilerplate-bash/issues"
+  },
+  "homepage": "https://github.com/mspgosende/rd-project-1-boilerplate-bash#readme",
+  "devDependencies": {
+    "selenium-webdriver": "^4.38.0"
+  }
+}
